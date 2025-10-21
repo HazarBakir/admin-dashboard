@@ -1,10 +1,13 @@
-import {  useState } from "react";
-import { supabase } from "../supabaseClient";
+import { useState } from "react";
+import { supabase } from "../../supabaseClient";
+import { useNavigate } from "react-router";
 
 export function AdminLoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
+
   const handleLogin = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -24,6 +27,7 @@ export function AdminLoginPage() {
 
       console.warn("Logged in! ", data);
       alert("Logged in!");
+      navigate('/admin')
     } catch (error) {
       console.error("Login Error", error);
       alert("Couldn't Log in.");
