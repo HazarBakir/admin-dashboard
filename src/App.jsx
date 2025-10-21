@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
-import {AdminLoginPage} from "./pages/adminLoginPage";
-
+import { AdminLoginPage } from "./pages/Login/AdminLogin";
+import { Admin } from "./pages/Admin/Admin";
 import "./App.css";
 
 function App() {
@@ -8,6 +8,7 @@ function App() {
     <>
       <Routes>
         <Route index element={<AdminLoginPage />} />
+        <Route path="/admin" element={<Admin />} />
       </Routes>
     </>
   );
