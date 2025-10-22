@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { supabase } from "../../supabaseClient";
 import { useNavigate } from "react-router";
+import { AdminLoginForm } from "../../components/AdminLoginForm";
 
 export function AdminLoginPage() {
   const [email, setEmail] = useState("");
@@ -27,7 +28,7 @@ export function AdminLoginPage() {
 
       console.warn("Logged in! ", data);
       alert("Logged in!");
-      navigate('/admin')
+      navigate("/admin");
     } catch (error) {
       console.error("Login Error", error);
       alert("Couldn't Log in.");
@@ -41,34 +42,16 @@ export function AdminLoginPage() {
       <div className="admin-login-container" id="admin-login-container">
         <h1>: )</h1>
         <h3>Please Log in</h3>
-        <form onSubmit={handleLogin}>
-          <input
-            type="text"
-            className="admin-login-email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="please enter your email"
-            required
-          />
-          <br />
-          <input
-            type="password"
-            className="admin-login-password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder="please enter your password"
-            required
-            minLength={6}
-          />
-          <br />
-          <input
-            type="submit"
-            value="Log in"
-            className="admin-login-submit"
-            disabled={loading}
-          />
-        </form>
+        <AdminLoginForm
+          email={email}
+          setEmail={setEmail}
+          password={password}
+          setPassword={setPassword}
+          loading={loading}
+          onLogin={handleLogin}
+        />
       </div>
     </>
   );
 }
+// ----- End AdminLoginPage -----
