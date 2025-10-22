@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
 import { supabase } from "../../supabaseClient";
 import { AdminEmailForm } from "../../components/AdminEmailForm";
+import { useNavigate } from "react-router-dom";
+import { Logout } from "../../components/Logout";
 
 export function Admin() {
   const [email, setEmail] = useState("");
   const [newEmail, setNewEmail] = useState("");
+  const navigate = useNavigate();
 
   async function changeEmail(e) {
     e.preventDefault();
@@ -50,6 +53,7 @@ export function Admin() {
             onSubmit={changeEmail}
           />
         </div>
+        <button onClick={() => Logout(navigate)}>Log out.</button>
       </div>
     </>
   );
