@@ -1,13 +1,22 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { supabase } from "../../supabaseClient";
 import { useNavigate } from "react-router";
 import { AdminLoginForm } from "../../components/AdminLoginForm";
+import { RequireUserCheck } from "../../components/checkUser";
 
 export function AdminLoginPage() {
+  const navigate = useNavigate();
+  const { isAuthenticated, isLoading } = RequireUserCheck();
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
-  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!isLoading && isAuthenticated) {
+      navigate("/admin");
+    }
+  }, [isAuthenticated, isLoading, navigate]);
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -37,21 +46,22 @@ export function AdminLoginPage() {
     }
   };
 
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
   return (
-    <>
-      <div className="admin-login-container" id="admin-login-container">
-        <h1>: )</h1>
-        <h3>Please Log in</h3>
-        <AdminLoginForm
-          email={email}
-          setEmail={setEmail}
-          password={password}
-          setPassword={setPassword}
-          loading={loading}
-          onLogin={handleLogin}
-        />
-      </div>
-    </>
+    <div className="admin-login-container" id="admin-login-container">
+      <h1>: )</h1>
+      <h3>Please Log in</h3>
+      <AdminLoginForm
+        email={email}
+        setEmail={setEmail}
+        password={password}
+        setPassword={setPassword}
+        loading={loading}
+        onLogin={handleLogin}
+      />
+    </div>
   );
 }
-// ----- End AdminLoginPage -----
