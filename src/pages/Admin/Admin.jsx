@@ -5,9 +5,10 @@ import { useNavigate } from "react-router-dom";
 import { Logout } from "../../components/Logout";
 
 export function Admin() {
+  const navigate = useNavigate();
+
   const [email, setEmail] = useState("");
   const [newEmail, setNewEmail] = useState("");
-  const navigate = useNavigate();
 
   async function changeEmail(e) {
     e.preventDefault();
