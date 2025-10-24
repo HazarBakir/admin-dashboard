@@ -1,3 +1,4 @@
+import "./Admin.css";
 import { useEffect, useState } from "react";
 import { supabase } from "../../supabaseClient";
 import { AdminEmailForm } from "../../components/AdminEmailForm";
@@ -40,21 +41,34 @@ export function Admin() {
     <>
       <GetUser setEmail={setEmail} />
       <div className="admin-container">
-        <h2>Welcome {email} </h2>
+        <div className="admin-header">
+          <h2 className="admin-welcome">Welcome {email}</h2>
+          <h2 className="admin-title">Admin Panel</h2>
+          <div className="admin-menu">
+            <h3>Menu</h3>
+            <ul>
+              <li>Dashboard</li>
+              <li>Users</li>
+              <li>Settings</li>
+            </ul>
+          </div>
+          <button
+            className="admin-logout-btn"
+            onClick={() => {
+              Logout(navigate);
+            }}
+          >
+            Log out
+          </button>
+        </div>
         <div className="admin-credential-container">
+          <h3>Configuration</h3>
           <AdminEmailForm
             newEmail={newEmail}
             setNewEmail={setNewEmail}
             onSubmit={changeEmail}
           />
         </div>
-        <button
-          onClick={() => {
-            Logout(navigate);
-          }}
-        >
-          Log out.
-        </button>
       </div>
     </>
   );
