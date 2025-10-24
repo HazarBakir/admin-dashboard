@@ -7,7 +7,6 @@ import { RequireUserCheck } from "../../components/checkUser";
 export function AdminLoginPage() {
   const navigate = useNavigate();
   const { isAuthenticated, isLoading } = RequireUserCheck();
-
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
@@ -20,8 +19,6 @@ export function AdminLoginPage() {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    setLoading(true);
-
     try {
       const { data, error } = await supabase.auth.signInWithPassword({
         email: email,
