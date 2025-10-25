@@ -9,7 +9,7 @@ export function GetUser({ setEmail }) {
     async function handleUser() {
       const {
         data: { user },
-        error
+        error,
       } = await supabase.auth.getUser();
       if (!user) {
         if (error) {

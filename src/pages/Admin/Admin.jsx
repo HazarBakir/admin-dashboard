@@ -41,7 +41,7 @@ export function Admin() {
     <>
       <GetUser setEmail={setEmail} />
       <div className="admin-container">
-        <h2 className="admin-welcome">Admin</h2>
+        <h2 className="admin-welcome">Admin: {email}</h2>
         <aside className="admin-sidebar">
           <h3>Menu</h3>
           <ul>
