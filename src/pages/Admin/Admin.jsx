@@ -41,17 +41,19 @@ export function Admin() {
     <>
       <GetUser setEmail={setEmail} />
       <div className="admin-container">
-        <div className="admin-header">
-          <h2 className="admin-welcome">Welcome {email}</h2>
-          <h2 className="admin-title">Admin Panel</h2>
-          <div className="admin-menu">
-            <h3>Menu</h3>
-            <ul>
-              <li>Dashboard</li>
-              <li>Users</li>
-              <li>Settings</li>
-            </ul>
-          </div>
+        <aside className="admin-sidebar">
+          <h3>Menu</h3>
+          <ul>
+            <li>
+              <a href="">Dashboard</a>
+            </li>
+            <li>
+              <a href="">User Settings</a>
+            </li>
+            <li>
+              <a href="">Settings</a>
+            </li>
+          </ul>
           <button
             className="admin-logout-btn"
             onClick={() => {
@@ -60,14 +62,17 @@ export function Admin() {
           >
             Log out
           </button>
-        </div>
-        <div className="admin-credential-container">
-          <h3>Configuration</h3>
-          <AdminEmailForm
-            newEmail={newEmail}
-            setNewEmail={setNewEmail}
-            onSubmit={changeEmail}
-          />
+        </aside>
+        <div className="admin-header">
+          <h2 className="admin-welcome">Welcome {email}</h2>
+          <div className="admin-credential-container">
+            <h3>Configuration</h3>
+            <AdminEmailForm
+              newEmail={newEmail}
+              setNewEmail={setNewEmail}
+              onSubmit={changeEmail}
+            />
+          </div>
         </div>
       </div>
     </>
