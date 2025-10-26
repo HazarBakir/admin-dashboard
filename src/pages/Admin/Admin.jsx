@@ -1,11 +1,12 @@
 import "./Admin.css";
 import { useEffect, useState } from "react";
 import { supabase } from "../../supabaseClient";
-import { AdminEmailForm } from "../../components/AdminEmailForm";
 import { useNavigate } from "react-router-dom";
-import { Logout } from "../../components/Logout";
 import { RequireUserCheck } from "../../components/checkUser";
 import { GetUser } from "../../components/GetUser";
+import { AdminSidebar } from "../../components/AdminSideBar";
+import { AdminLogoutButton } from "../../components/AdminLogOut";
+import { AdminHeader } from "../../components/AdminHeader";
 
 export function Admin() {
   const { isAuthenticated, isLoading } = RequireUserCheck();
@@ -42,38 +43,13 @@ export function Admin() {
       <GetUser setEmail={setEmail} />
       <div className="admin-container">
         <h2 className="admin-welcome">Admin: {email}</h2>
-        <aside className="admin-sidebar">
-          <h3>Menu</h3>
-          <ul>
-            <li>
-              <a href="">Dashboard</a>
-            </li>
-            <li>
-              <a href="">User Settings</a>
-            </li>
-            <li>
-              <a href="">Settings</a>
-            </li>
-          </ul>
-        </aside>
-        <button
-          className="admin-logout-btn"
-          onClick={() => {
-            Logout(navigate);
-          }}
-        >
-          Log out
-        </button>
-        <div className="admin-header">
-          <div className="admin-credential-container">
-            <h3>Configuration</h3>
-            <AdminEmailForm
-              newEmail={newEmail}
-              setNewEmail={setNewEmail}
-              onSubmit={changeEmail}
-            />
-          </div>
-        </div>
+        <AdminSidebar />
+        <AdminLogoutButton navigate={navigate} />
+        <AdminHeader
+          newEmail={newEmail}
+          setNewEmail={setNewEmail}
+          changeEmail={changeEmail}
+        />
       </div>
     </>
   );
