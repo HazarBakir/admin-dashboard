@@ -22,18 +22,28 @@ export function Admin() {
 
   async function changeEmail(e) {
     e.preventDefault();
-    const { data, error } = await supabase.auth.updateUser({
-      email: newEmail,
-    });
+    try {
+      const { data, error } = await supabase.auth.updateUser({
+        email: newEmail,
+      });
 
-    if (error) {
-      console.error("Error updating email:", error.message);
-      return;
-    }
-    if (data) {
-      console.warn("Email update successful:", data);
+      if (error) {
+        console.error("Error updating email:", error.message);
+        alert("Error updating email: " + error.message);
+        return;
+      }
+      if (data) {
+        console.warn("Email update successful:", data);
+        alert(
+          "Email update successful! Please check your new email to confirm the change."
+        );
+      }
+    } catch (err) {
+      console.error("Unexpected error updating email:", err);
+      alert("Unexpected error updating email.");
     }
   }
+
   if (isLoading) {
     return <div>Loading...</div>;
   }

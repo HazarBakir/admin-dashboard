@@ -4,13 +4,13 @@ export function AdminSidebar() {
       <h3>Menu</h3>
       <ul>
         <li>
-          <a href="">Dashboard</a>
+          <a href="">Dashboard-mock</a>
         </li>
         <li>
-          <a href="">User Settings</a>
+          <a href="">User Settings-mock</a>
         </li>
         <li>
-          <a href="">Settings</a>
+          <a href="">Settings-mock</a>
         </li>
       </ul>
     </aside>
