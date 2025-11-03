@@ -2,10 +2,10 @@ import "./Admin.css";
 import { useEffect, useState } from "react";
 import { supabase } from "../../supabaseClient";
 import { useNavigate } from "react-router-dom";
-import { RequireUserCheck } from "../../components/checkUser";
+import { RequireUserCheck } from "../../components/CheckUser";
 import { GetUser } from "../../components/GetUser";
 import { AdminSidebar } from "../../components/AdminSideBar";
-import { AdminLogoutButton } from "../../components/AdminLogOut";
+import { AdminLogoutButton } from "../../components/AdminLogout";
 import { AdminHeader } from "../../components/AdminHeader";
 
 export function Admin() {
