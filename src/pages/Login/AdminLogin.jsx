@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { supabase } from "../../supabaseClient";
 import { useNavigate } from "react-router";
 import { AdminLoginForm } from "../../components/AdminLoginForm";
-import { RequireUserCheck } from "../../components/checkUser";
+import { RequireUserCheck } from "../../components/CheckUser";
 
 export function AdminLoginPage() {
   const navigate = useNavigate();
