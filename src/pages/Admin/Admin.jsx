@@ -6,7 +6,7 @@ import { RequireUserCheck } from "../../hooks/useAuth";
 import { GetUser } from "../../hooks/useUser";
 import { AdminSidebar } from "../../components/Admin/AdminSideBar";
 import { AdminLogoutButton } from "../../components/Admin/AdminLogout";
-import { AdminHeader } from "../../components/Admin/AdminHeader";
+import { Configuration } from "../../components/Admin/AdminConfiguration";
 
 export function Admin() {
   const { isAuthenticated, isLoading } = RequireUserCheck();
@@ -49,18 +49,18 @@ export function Admin() {
   }
 
   return (
-    <div className="admin-container">
+    <>
       <GetUser setEmail={setEmail} />
       <div className="admin-container">
         <h2 className="admin-welcome">Welcome Back!</h2>
         <AdminSidebar />
         <AdminLogoutButton navigate={navigate} />
-        <AdminHeader
+        <Configuration
           newEmail={newEmail}
           setNewEmail={setNewEmail}
           changeEmail={changeEmail}
         />
       </div>
-    </div>
+    </>
   );
 }

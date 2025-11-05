@@ -1,49 +1,11 @@
-.admin-sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 250px;
-  height: 100vh;
-  background-color: #111827;
-  display: flex;
-  flex-direction: column;
-}
-
-.admin-sidebar hr {
-  border: 1px solid #1f2937;
-  margin: 0rem 0;
-}
-.admin-sidebar h3 {
-  text-align: left;
-  padding-left: 1rem;
-  padding-top: 0.5rem;
-  font-size: 1.1rem;
-}
-
-.admin-sidebar li {
-  font-size: 1.25rem;
-  padding: 0.75rem 1rem;
-  margin-bottom: 0.5rem;
-}
-
-.admin-logout-btn {
-  position: fixed;
-  top: 2rem;
-  right: 2rem;
-  font-size: 1.125rem;
-  padding: 0.75rem 1.5rem;
-}
-
-.admin-welcome {
-  position: fixed;
-  top: 2rem;
-  left: calc(250px + 5rem);
-  font-size: 1.875rem;
-}
-
-.admin-credential-container {
-  margin-left: 270px;
-  margin-top: 6rem;
-  font-size: 1.75rem;
-  padding: 2rem;
+.admin-container {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header header"
+    "aside main"
+    "footer footer";
+  min-height: 100vh;
+  gap: 15px;
 }
