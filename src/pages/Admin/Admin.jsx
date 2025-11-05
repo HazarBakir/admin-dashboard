@@ -52,9 +52,7 @@ export function Admin() {
     <>
       <GetUser setEmail={setEmail} />
       <div className="admin-container">
-        <h2 className="admin-welcome">Welcome Back!</h2>
-        <AdminSidebar />
-        <AdminLogoutButton navigate={navigate} />
+        <AdminSidebar navigate={navigate} />
         <Configuration
           newEmail={newEmail}
           setNewEmail={setNewEmail}
