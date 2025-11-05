@@ -2,11 +2,11 @@ import "./Admin.css";
 import { useEffect, useState } from "react";
 import { supabase } from "../../supabaseClient";
 import { useNavigate } from "react-router-dom";
-import { RequireUserCheck } from "../../components/CheckUser";
-import { GetUser } from "../../components/GetUser";
-import { AdminSidebar } from "../../components/AdminSideBar";
-import { AdminLogoutButton } from "../../components/AdminLogout";
-import { AdminHeader } from "../../components/AdminHeader";
+import { RequireUserCheck } from "../../hooks/useAuth";
+import { GetUser } from "../../hooks/useUser";
+import { AdminSidebar } from "../../components/Admin/AdminSideBar";
+import { AdminLogoutButton } from "../../components/Admin/AdminLogout";
+import { AdminHeader } from "../../components/Admin/AdminHeader";
 
 export function Admin() {
   const { isAuthenticated, isLoading } = RequireUserCheck();
@@ -49,10 +49,10 @@ export function Admin() {
   }
 
   return (
-    <>
+    <div className="admin-container">
       <GetUser setEmail={setEmail} />
       <div className="admin-container">
-        <h2 className="admin-welcome">Admin: {email}</h2>
+        <h2 className="admin-welcome">Welcome Back!</h2>
         <AdminSidebar />
         <AdminLogoutButton navigate={navigate} />
         <AdminHeader
@@ -61,6 +61,6 @@ export function Admin() {
           changeEmail={changeEmail}
         />
       </div>
-    </>
+    </div>
   );
 }
