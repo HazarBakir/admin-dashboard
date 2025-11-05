@@ -1,4 +1,4 @@
-import { Logout } from "./Logout";
+import { Logout } from "../../utils/Logout";
 
 export function AdminLogoutButton({ navigate }) {
   return (
@@ -12,4 +12,3 @@ export function AdminLogoutButton({ navigate }) {
     </button>
   );
 }
-
