@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import { AdminLoginPage } from "./pages/Login/AdminLogin";
 import { Admin } from "./pages/Admin/Admin";
-import "./App.css";
+import "./styles/globals.css";
 
 function App() {
   return (
