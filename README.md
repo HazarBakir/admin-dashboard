@@ -1,4 +1,4 @@
-# 🔐 Admin Dashboard
+# Admin Dashboard
 
 A modern, secure admin dashboard built with React and Supabase authentication. This project demonstrates best practices in frontend development, including component architecture, custom hooks, and protected routes.
 
@@ -9,19 +9,19 @@ A modern, secure admin dashboard built with React and Supabase authentication. T
 
 ---
 
-## ✨ Features
+## Features
 
-- 🔒 **Secure Authentication** - User authentication and authorization with Supabase
-- 🛡️ **Protected Routes** - Automatic redirect for unauthorized users
-- 📧 **Email Management** - Update user email with validation
-- 🎨 **Modern UI** - Clean, responsive dashboard interface
-- 🔄 **Custom Hooks** - Reusable authentication and user management hooks
-- 📱 **Responsive Design** - Works seamlessly across all device sizes
-- ⚡ **Fast Development** - Hot module replacement with Vite
+- **Secure Authentication** - User authentication and authorization with Supabase
+- **Protected Routes** - Automatic redirect for unauthorized users
+- **Email Management** - Update user email with validation
+- **Modern UI** - Clean, responsive dashboard interface
+- **Custom Hooks** - Reusable authentication and user management hooks
+- **Responsive Design** - Works seamlessly across all device sizes
+- **Fast Development** - Hot module replacement with Vite
 
 ---
 
-## 🚀 Tech Stack
+## Tech Stack
 
 ### Core Technologies
 - **React 18.2** - UI library
@@ -36,7 +36,7 @@ A modern, secure admin dashboard built with React and Supabase authentication. T
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 src/
@@ -68,7 +68,7 @@ src/
 
 ---
 
-## 🛠️ Installation
+## Installation
 
 ### Prerequisites
 - Node.js (v16 or higher)
@@ -108,7 +108,7 @@ src/
 
 ---
 
-## 📖 Usage
+## Usage
 
 ### Authentication Flow
 
@@ -131,7 +131,7 @@ src/
 
 ---
 
-## 🔧 Available Scripts
+## Available Scripts
 
 - `npm run dev` - Start development server with hot reload
 - `npm run build` - Build for production
@@ -140,7 +140,7 @@ src/
 
 ---
 
-## 🎯 Key Implementation Details
+## Key Implementation Details
 
 ### Custom Hooks
 - **`useAuth`** - Manages authentication state and loading status
@@ -158,7 +158,7 @@ src/
 
 ---
 
-## 🚧 Future Enhancements
+## Future Enhancements
 
 Potential features for future development:
 
@@ -173,7 +173,7 @@ Potential features for future development:
 
 ---
 
-## 📝 Configuration
+## Configuration
 
 ### Environment Variables
 
@@ -192,7 +192,7 @@ const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! If you'd like to contribute:
 
@@ -203,10 +203,10 @@ Contributions are welcome! If you'd like to contribute:
 5. Open a Pull Request
 
 
-## 👨‍💻 Author
+## Author
 
 **Hazar Bakir**
 
 - GitHub: [@HazarBakir](https://github.com/HazarBakir)
 
-**Built with ❤️ using React and Supabase**
+**Built with  using React and Supabase**
