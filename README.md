@@ -33,7 +33,6 @@ A modern, secure admin dashboard built with React and Supabase authentication. T
 
 ### Development Tools
 - **ESLint** - Code linting and formatting
-- **TypeScript Types** - Type definitions for React
 
 ---
 
