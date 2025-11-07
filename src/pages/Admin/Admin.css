@@ -72,32 +72,7 @@
 /* ============================
    Admin Configuration Styles
    ============================ */
-.admin-configuration {
-  box-sizing: border-box;
-  padding: 18px 14px;
-  background: #1a1d20;
-  border-radius: 5px;
-  grid-area: main;
-  color: #edeff2;
-  border: 1px solid #222428;
-  min-height: 180px;
-  transition: border-color 0.16s;
-}
 
-.admin-configuration:hover {
-  border-color: #5c5d63;
-}
-
-.admin-configuration::before {
-  display: none;
-}
-
-.admin-configuration p {
-  color: #babdc3;
-  font-size: 13.5px;
-  margin-bottom: 12px;
-  letter-spacing: normal;
-}
 
 /* ============================
    Change Credential Form Styles

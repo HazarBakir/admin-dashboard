@@ -1,4 +1,5 @@
 import { ChangeCredentials } from "./AdminChangeForm";
+import "./AdminConfiguration.css";
 
 export function Configuration({ newCredential, setNewCredential, onSubmit }) {
   return (
