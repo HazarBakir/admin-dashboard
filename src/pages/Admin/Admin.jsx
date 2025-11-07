@@ -4,7 +4,7 @@ import { supabase } from "../../supabaseClient";
 import { useNavigate } from "react-router-dom";
 import { RequireUserCheck } from "../../hooks/useAuth";
 import { GetUser } from "../../hooks/useUser";
-import { AdminSidebar } from "../../components/Admin/AdminSideBar";
+import { SideBar } from "../../components/Admin/SideBar";
 import { Configuration } from "../../components/Admin/AdminConfiguration";
 import { AdminHeader } from "../../components/Admin/Header";
 
@@ -53,7 +53,7 @@ export function Admin() {
       <GetUser setEmail={setEmail} />
       <div className="admin-container">
         <AdminHeader email={email} navigate={navigate} />
-        <AdminSidebar />
+        <SideBar />
         <Configuration
           newCredential={newEmail}
           setNewCredential={setNewEmail}

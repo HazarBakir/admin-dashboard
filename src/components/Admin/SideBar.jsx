@@ -1,4 +1,5 @@
-export function AdminSidebar() {
+import "./SideBar.css";
+export function SideBar() {
   return (
     <aside className="admin-sidebar">
       <h3>Admin Panel</h3>
