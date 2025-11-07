@@ -7,7 +7,6 @@ import { GetUser } from "../../hooks/useUser";
 import { AdminSidebar } from "../../components/Admin/AdminSideBar";
 import { AdminLogoutButton } from "../../components/Admin/AdminLogout";
 import { Configuration } from "../../components/Admin/AdminConfiguration";
-
 export function Admin() {
   const { isAuthenticated, isLoading } = RequireUserCheck();
   const navigate = useNavigate();
@@ -53,14 +52,14 @@ export function Admin() {
       <GetUser setEmail={setEmail} />
       <div className="admin-container">
         <header className="admin-header">
-          <h3>Welcome</h3>
+          <h3>Welcome {email}</h3>
           <AdminLogoutButton navigate={navigate} />
         </header>
         <AdminSidebar />
         <Configuration
-          newEmail={newEmail}
-          setNewEmail={setNewEmail}
-          changeEmail={changeEmail}
+          newCredential={newEmail}
+          setNewCredential={setNewEmail}
+          onSubmit={changeEmail}
         />
       </div>
     </>

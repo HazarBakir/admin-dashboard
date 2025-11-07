@@ -1,17 +1,17 @@
-import { ChangeEmail } from "./AdminChangeForm";
+import { ChangeCredentials } from "./AdminChangeForm";
 
-export function Configuration({ newEmail, setNewEmail, changeEmail }) {
+export function Configuration({ newCredential, setNewCredential, onSubmit }) {
   return (
     <div className="admin-configuration">
       <h2>Configuration</h2>
       <p>
-        Here you can update your account email. Enter your new email address
-        below and submit the form to change your contact information.
+        Here you can update your account credentials. Enter your new credentials
+        below and submit the form to change your credentials.
       </p>
-      <ChangeEmail
-        newEmail={newEmail}
-        setNewEmail={setNewEmail}
-        onSubmit={changeEmail}
+      <ChangeCredentials
+        newCredential={newCredential}
+        setNewCredential={setNewCredential}
+        onSubmit={onSubmit}
       />
     </div>
   );
