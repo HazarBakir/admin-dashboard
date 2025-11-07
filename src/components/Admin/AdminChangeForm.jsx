@@ -1,11 +1,10 @@
-export function ChangeCredentials({ newCredential, setNewCredential, onSubmit }) {
+export function ChangeCredentials({ newCredential, setNewCredential, onSubmit, header, paragraph}) {
   return (
     <div className="change-credential-container">
       <form onSubmit={onSubmit}>
-        <h4>Change your credentials</h4>
+        <h4>{header}</h4>
         <p>
-          You will receive a confirmation email at your new credential. The change
-          will only take effect after you confirm the new credential.
+          {paragraph}
         </p>
         <input
           type="text"

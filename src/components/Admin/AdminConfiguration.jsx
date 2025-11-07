@@ -12,6 +12,8 @@ export function Configuration({ newCredential, setNewCredential, onSubmit }) {
         newCredential={newCredential}
         setNewCredential={setNewCredential}
         onSubmit={onSubmit}
+        header="Change your email address"
+        paragraph="You will receive a confirmation email at your new email address. The change will only take effect after you confirm the new email address."
       />
     </div>
   );
