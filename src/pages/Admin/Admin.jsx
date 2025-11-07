@@ -5,8 +5,9 @@ import { useNavigate } from "react-router-dom";
 import { RequireUserCheck } from "../../hooks/useAuth";
 import { GetUser } from "../../hooks/useUser";
 import { AdminSidebar } from "../../components/Admin/AdminSideBar";
-import { AdminLogoutButton } from "../../components/Admin/AdminLogout";
 import { Configuration } from "../../components/Admin/AdminConfiguration";
+import { AdminHeader } from "../../components/Admin/Header";
+
 export function Admin() {
   const { isAuthenticated, isLoading } = RequireUserCheck();
   const navigate = useNavigate();
@@ -51,10 +52,7 @@ export function Admin() {
     <>
       <GetUser setEmail={setEmail} />
       <div className="admin-container">
-        <header className="admin-header">
-          <h3>Welcome {email}</h3>
-          <AdminLogoutButton navigate={navigate} />
-        </header>
+        <AdminHeader email={email} navigate={navigate} />
         <AdminSidebar />
         <Configuration
           newCredential={newEmail}

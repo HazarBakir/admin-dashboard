@@ -1,4 +1,5 @@
 import { Logout } from "../../utils/Logout";
+import "./AdminLogout.css";
 
 export function AdminLogoutButton({ navigate }) {
   return (

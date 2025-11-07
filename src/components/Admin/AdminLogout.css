@@ -1,0 +1,40 @@
+.admin-logout-btn {
+  background: #dc143c;
+  color: #fff;
+  border: none;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 7px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  letter-spacing: 0.02em;
+  transition: background 0.18s, color 0.18s;
+  display: block;
+}
+
+.admin-logout-btn:hover,
+.admin-logout-btn:focus {
+  background: #b3142c;
+  color: #fff;
+}
+.admin-logout-btn {
+  background: #dc143c;
+  color: #fff;
+  border: none;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 7px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  letter-spacing: 0.02em;
+  transition: background 0.18s, color 0.18s;
+  display: block;
+}
+
+.admin-logout-btn:hover,
+.admin-logout-btn:focus {
+  background: #b3142c;
+  color: #fff;
+}
