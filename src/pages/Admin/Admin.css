@@ -1,7 +1,3 @@
-
-/* ============================
-   Admin Container Styles
-   ============================ */
 .admin-container {
   display: grid;
   grid-template-columns: 180px 1fr;
@@ -14,28 +10,4 @@
   gap: 12px;
   background: #171a1d;
 }
-
-/* ============================
-   Admin Sidebar Styles
-   ============================ */
-
-
-/* ============================
-   Admin Configuration Styles
-   ============================ */
-
-
-/* ============================
-   Change Credential Form Styles
-   ============================ */
-
-
-/* ============================
-   Admin Header Styles
-   ============================ */
-
-
-/* ============================
-   Admin Logout Button Styles
-   ============================ */
 
