@@ -1,11 +1,8 @@
-import { AdminLogoutButton } from "./AdminLogout";
-
-
-export function AdminSidebar({navigate}) {
+export function AdminSidebar() {
   return (
     <aside className="admin-sidebar">
       <h3>Admin Panel</h3>
-      <hr/>
+      <hr />
       <ul>
         <li>
           <a href="">Configuration</a>
@@ -17,7 +14,6 @@ export function AdminSidebar({navigate}) {
           <a href="">Settings-mock</a>
         </li>
       </ul>
-      <AdminLogoutButton navigate={navigate} />
     </aside>
   );
 }
