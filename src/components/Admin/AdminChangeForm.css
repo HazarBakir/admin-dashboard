@@ -1,0 +1,12 @@
+.change-credential-container {
+    background: #2b2e33ad;
+    border-radius: 4px;
+    padding: 10px 12px;
+    border: 1px solid #21232c;
+    width: 64%;
+    transition: border-color 0.16s;
+  }
+  
+  .change-credential-container:hover {
+    border-color: #5c5d63;
+  }

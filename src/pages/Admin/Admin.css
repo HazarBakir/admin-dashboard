@@ -102,41 +102,12 @@
 /* ============================
    Change Credential Form Styles
    ============================ */
-.change-credential-container {
-  background: #2b2e33ad;
-  border-radius: 4px;
-  padding: 10px 12px;
-  border: 1px solid #21232c;
-  width: 64%;
-  transition: border-color 0.16s;
-}
 
-.change-credential-container:hover {
-  border-color: #5c5d63;
-}
 
 /* ============================
    Admin Header Styles
    ============================ */
-.admin-header {
-  grid-area: header;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 12px;
-  background: #1a1d20;
-  border-radius: 5px;
-  border: 1px solid #222428;
-  transition: border-color 0.16s;
-}
 
-.admin-header h3 {
-  font-size: 16px;
-  font-weight: 600;
-  color: #e0e2e5;
-  margin: 0;
-  letter-spacing: .1em;
-}
 
 /* ============================
    Admin Logout Button Styles

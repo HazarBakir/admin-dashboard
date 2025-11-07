@@ -1,4 +1,5 @@
 import { AdminLogoutButton } from "./AdminLogout";
+import "./Header.css";
 
 export function AdminHeader({ email, navigate }) {
   return (

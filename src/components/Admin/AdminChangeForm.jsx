@@ -1,3 +1,5 @@
+import "./AdminChangeForm.css";
+
 export function ChangeCredentials({ newCredential, setNewCredential, onSubmit, header, paragraph}) {
   return (
     <div className="change-credential-container">
